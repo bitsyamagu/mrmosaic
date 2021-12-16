@@ -3,7 +3,7 @@ default:
 	make install_r_package
 
 cnv_baf_data: 
-	wget -N https://sourceforge.net/projects/samtools/files/samtools/1.3/samtools-1.3.tar.bz2
+	wget --no-check-certificate -N https://sourceforge.net/projects/samtools/files/samtools/1.3/samtools-1.3.tar.bz2
 	tar -vjxf samtools-1.3.tar.bz2
 	cp cnv_baf_data.c samtools-1.3
 	cd samtools-1.3; make clean; make;
