@@ -1,0 +1,25 @@
+# How to install under conda environment
+
+1. Create environment
+   conda create -n mrmosaic python=3.8
+2. Activate it
+   conda activate mrmosaic
+3. Install R and packages
+   conda install -n mrmosaic -c r r
+   conda insyall -n mrmosaic -c r r-devtools
+   conda install -n mrmosaic -c r r-ggplot2
+4. Install gada
+   R
+   > install.packages("gada", repos="http://R-Forge.R-project.org")
+   > q()
+5. Download mrmosaic
+   git clone https://github.com/bitsyamagu/mrmosaic
+6. make it
+   cd mrmosaic
+   make
+   
+When you got a message that you need initialize conda, 
+add this to your .bashrc:
+. ${CONDA_HOME}/etc/profile.d/conda.sh
+
+(The ${CONDA_HOME} is your conda installation)
