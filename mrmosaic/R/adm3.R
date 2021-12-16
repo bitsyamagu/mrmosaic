@@ -12,8 +12,8 @@
 #'
 #' @return Dataframe with read depth information
 #' @export
-read_unique_depth_bait_data <- function(file, n) {
-read.table(pipe(paste("awk -F", '"\t"', " '!_[$1]++' ", file, " | cut -f1-3 ",sep="")), header=FALSE, check.names=FALSE, colClasses=c("character", "numeric", "numeric"), nrows=n, comment.char="", sep="\t")
+read_unique_depth_bait_data <- function(infile, n) {
+read.table(pipe(paste("awk -F", '"\t"', " '!_[$1]++' ", infile, " | cut -f1-3 ",sep="")), header=FALSE, check.names=FALSE, colClasses=c("character", "numeric", "numeric"), nrows=n, comment.char="", sep="\t")
 }
 
 #' Calculates the correlation between samples using read counts at bait regions
